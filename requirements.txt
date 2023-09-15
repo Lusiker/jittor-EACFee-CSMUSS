@@ -1,0 +1,8 @@
+albumentations
+scikit-learn
+pandas
+munkres
+tqdm
+pillow
+opencv-python
+faiss-gpu
