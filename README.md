@@ -1,10 +1,14 @@
 # Jittor 大规模无监督语义分割赛道-CSMUSS
 
 ## 简介
+![image](https://github.com/Lusiker/jittor-EACFee-CSMUSS/blob/main/img/method.png)
 本项目包含了第三届计图人工智能挑战赛赛道二-大规模无监督语义分割(LUSS)赛题的代码实现。本项目的主要特点如下：
 1. 采用了PASS方法作为basic model。
 2. 引入了基于SAM-ViT-B的类别-语义聚合模块增强伪标签质量。
 3. 引入U-Shape模块改进网络分割头，增强网络的表达能力。
+
+## 项目成果
+![image](https://github.com/Lusiker/jittor-EACFee-CSMUSS/blob/main/img/outputs.png)
 
 ## 安装 
 本项目可在1张4090上运行，训练时间约为48小时。
@@ -19,9 +23,6 @@
 ```
 pip install -r requirements.txt
 ```
-
-### 数据准备
-
 
 ### 预训练模型
 本项目需要使用预训练的SAM-ViT-B模型，下载地址为https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth 。随后，你需要在`./train.sh` 中运行amg.py的部分修改--checkpoint参数为SAM模型对应的地址。运行此段脚本能得到所有制定路径下所有图片的对应SAM分割mask。
